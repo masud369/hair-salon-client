@@ -1,0 +1,29 @@
+/* input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: rgb(234, 54, 54);
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #666;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #666;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #666;
+} */
+.demo{color:red;}
+::placeholder {
+    color: #998623;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #998623;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #998623;
+  }
