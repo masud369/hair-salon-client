@@ -9,6 +9,9 @@ import PrivetRout from "./Components/PrivetRoute/PrivetRout";
 import Book from "./Components/Book/Book";
 import BookingList from "./Components/BookingList/BookingList";
 import Review from "./Components/Review/Review";
+import OrderList from "./Components/OrderList/OrderList";
+import AddServices from "./Components/AddServices/AddServices";
+import MakeAdmin from "./Components/MakeAdmin/MakeAdmin";
 
 export const UserContext = createContext();
 function App() {
@@ -30,6 +33,15 @@ function App() {
             </Route>
             <Route path="/dashboard/review" element={<PrivetRout/>}>
                <Route path="/dashboard/review" element={<Review />} />
+            </Route>
+            <Route path="/dashboard/orderList" element={<PrivetRout/>}>
+               <Route path="/dashboard/orderList" element={<OrderList />} />
+            </Route>
+            <Route path="/dashboard/addServices" element={<PrivetRout/>}>
+               <Route path="/dashboard/addServices" element={<AddServices />} />
+            </Route>
+            <Route path="/dashboard/makeAdmin" element={<PrivetRout/>}>
+               <Route path="/dashboard/makeAdmin" element={<MakeAdmin />} />
             </Route>
             
             <Route path="/login" element={<Login />} />

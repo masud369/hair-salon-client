@@ -34,10 +34,11 @@ const Review = () => {
           </div>
           <div className="col-md-10 px-0">
             <div className="d-flex justify-content-between">
-              <h4 className="mt-5 px-3 title-color">Booking List</h4>
+              <h4 className="mt-5 px-3 title-color">Review</h4>
               <h4 className="mt-5 px-3 title-color">{loggedinUser.displayName}</h4>
             </div>
             <div className="py-3 px-4 " style={{backgroundColor:'gray',height:'87.1vh'}}>
+              <h2 className='text-light'>Put Your Review Here</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* register your input into the hook by invoking the "register" function */}
             <input className="p-2 my-2" style={{width:'70%'}} id="name" defaultValue={loggedinUser.displayName} {...register("name",{ required: true })} type="text" placeholder="your name" /> <br />

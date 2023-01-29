@@ -7,10 +7,12 @@ const Dashboard = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data => {
     console.log(data);
+    const newData = {...data}
+    newData.stutas = "Not Opened";
         fetch('http://localhost:5000/postOrder',{
           method:"POST",
           headers:{'Content-Type':"application/json"},
-          body:JSON.stringify(data)
+          body:JSON.stringify(newData)
         })
         .then(res=>res.json())
         .then(result=>{

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../../App';
 import logo from '../../../logo/logo2.png'
 const NavMenu = () => {
+  const [loggedinUser] = useContext(UserContext);
     return (
     <div>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style={{borderBottom:'3px solid #ddd'}}  className="py-4">
@@ -22,11 +24,16 @@ const NavMenu = () => {
                  <Nav.Link as={Link} to="/dashboard/book" className='text-decoration-none px-4'>Admin</Nav.Link>
               
             </Nav>
-            <Nav>
+            {!loggedinUser.email && <Nav className=''>
               <Nav.Link as={Link} to="/login" eventKey={2}>
                Login
               </Nav.Link>
-            </Nav>
+            </Nav>}
+            {loggedinUser.email && <Nav className=''>
+              <Nav.Link as={Link} to="/login" eventKey={2}>
+               Logout
+              </Nav.Link>
+            </Nav>}
             
           </Navbar.Collapse>
         </Container>
