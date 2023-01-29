@@ -9,7 +9,7 @@ const BookingList = () => {
   const [loggedinUser,setLoggedinUser] = useContext(UserContext);
   const [lists, setLists] = useState([]);
   useEffect(()=>{
-    fetch("http://localhost:5000/getOrders?email="+loggedinUser.email)
+    fetch("https://hairsalon-server.onrender.com/getOrders?email="+loggedinUser.email)
     .then(res=>res.json())
     .then(result=>setLists(result))
   },[])

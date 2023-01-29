@@ -15,7 +15,7 @@ const changeStutas = (e,id)=>{
   setStutas(newStutas);
 }
   useEffect(()=>{
-    fetch('http://localhost:5000/orderLists',{
+    fetch('https://hairsalon-server.onrender.com/orderLists',{
           method:"PUT",
           headers:{'Content-Type':"application/json"},
           body:JSON.stringify(stutas)

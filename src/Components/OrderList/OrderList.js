@@ -7,7 +7,7 @@ const OrderList = () => {
   const [loggedinUser, setLoggedinUser] = useContext(UserContext);
   const [ordersList, setOrdersList] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/orderList")
+    fetch("https://hairsalon-server.onrender.com/orderList")
       .then((res) => res.json())
       .then((data) => {
         setOrdersList(data);

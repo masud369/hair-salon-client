@@ -9,7 +9,7 @@ const Dashboard = () => {
     console.log(data);
     const newData = {...data}
     newData.stutas = "Not Opened";
-        fetch('http://localhost:5000/postOrder',{
+        fetch('https://hairsalon-server.onrender.com/postOrder',{
           method:"POST",
           headers:{'Content-Type':"application/json"},
           body:JSON.stringify(newData)

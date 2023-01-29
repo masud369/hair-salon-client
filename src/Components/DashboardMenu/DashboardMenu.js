@@ -15,7 +15,7 @@ const DashboardMenu = () => {
   const [checkAdmin, setCheckAdmin] = useState(false);
   console.log(loggedinUser.email)
   useEffect(()=>{
-    fetch("http://localhost:5000/checkAdmins?email="+loggedinUser.email)
+    fetch("https://hairsalon-server.onrender.com/checkAdmins?email="+loggedinUser.email)
     .then(res=>res.json())
     .then(data=>{
       data.map(dt=>{if(dt.email === loggedinUser.email){

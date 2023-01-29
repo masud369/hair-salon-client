@@ -35,7 +35,7 @@ const ReviewSection = () => {
   const [loggedinUser,setLoggedinUser] = useContext(UserContext);
     const [reviews, setReviews] = useState([]);
     useEffect(()=>{
-      fetch("http://localhost:5000/getReviews")
+      fetch("https://hairsalon-server.onrender.com/getReviews")
       .then(res=>res.json())
       .then(result=>setReviews(result))
     },[])
